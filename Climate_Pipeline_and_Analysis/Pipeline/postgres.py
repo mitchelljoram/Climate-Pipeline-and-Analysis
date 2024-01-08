@@ -10,7 +10,7 @@ host = "127.0.0.1"
 port = "5433"
 database = "postgres"
 
-# TODO: Load
+# Load
 def load(data):
     try:
         print("Loading data into Postgres...")

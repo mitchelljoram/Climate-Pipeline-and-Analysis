@@ -5,7 +5,7 @@ CLIMATIQ API -> POSTGRES PIPELINE
 from api import extract
 from postgres import load
 
-#TODO: Transform
+# Transform
 def transform(raw):
     try:
         print("Transforming data...")
@@ -40,6 +40,7 @@ def transform(raw):
         print("Transformation error: " + str(e))
 
 
+# ETL Pipeline
 def pipeline():
     print("Executing pipeline...")
 

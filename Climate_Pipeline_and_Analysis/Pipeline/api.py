@@ -35,7 +35,7 @@ parameters = {
 # You must always specify your AUTH token in the "Authorization" header like this.
 authorization_headers = {"Authorization": f"Bearer: {MY_API_KEY}"}
 
-# TODO: Extract
+# Extract
 def extract():
     try: 
         print("Extracting data from Climatiq API...")
@@ -66,7 +66,7 @@ def extract():
         print("Extraction error: " + str(e))
 
 
-# Test CLIMATIQ API
+# Test Climatiq API
 def test():
     test_data = []
     for state in states:
@@ -77,12 +77,8 @@ def test():
                 "region": f"US-{state}",
                 "year": 2022,
             },
-            # Specify how much energy we're estimating for
             "parameters": parameters
         }
-        # We send a POST request to the estimate endpoint with a json body
-        # and the correct authorization headers.
-        # This line will send the request and retrieve the body as JSON.
 
         response = requests.post(BASE_URL, json=json_body, headers=authorization_headers).json()
         
